@@ -4,65 +4,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 260 24% 16%; /* Dark Violet */
+    --foreground: 0 0% 100%; /* White */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 260 24% 16%; /* Dark Violet */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 260 24% 16%; /* Dark Violet */
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 282 39% 25%; /* Deep Violet */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 260 24% 96%; /* Light Violet */
+    --secondary-foreground: 282 39% 25%; /* Deep Violet */
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 260 24% 96%; /* Light Violet */
+    --muted-foreground: 260 24% 46%; /* Medium Violet */
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 260 24% 96%; /* Light Violet */
+    --accent-foreground: 282 39% 25%; /* Deep Violet */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 260 24% 90%; /* Very Light Violet */
+    --input: 260 24% 90%; /* Very Light Violet */
+    --ring: 282 39% 25%; /* Deep Violet */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 260 24% 16%; /* Dark Violet */
+    --foreground: 0 0% 100%; /* White */
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 260 24% 16%; /* Dark Violet */
+    --card-foreground: 0 0% 100%; /* White */
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 260 24% 16%; /* Dark Violet */
+    --popover-foreground: 0 0% 100%; /* White */
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 0 0% 100%; /* White */
+    --primary-foreground: 282 39% 25%; /* Deep Violet */
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 260 24% 25%; /* Darker Violet */
+    --secondary-foreground: 0 0% 100%; /* White */
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 260 24% 25%; /* Darker Violet */
+    --muted-foreground: 260 24% 70%; /* Medium Violet */
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 260 24% 25%; /* Darker Violet */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%; /* Dark Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 260 24% 25%; /* Darker Violet */
+    --input: 260 24% 25%; /* Darker Violet */
+    --ring: 260 24% 83.9%; /* Very Light Violet */
   }
 }
 
@@ -85,5 +85,25 @@
 
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+  }
+
+  .violet-gradient {
+    background: linear-gradient(90deg, #4b0082 0%, #8a2be2 100%);
+  }
+
+  .violet-border {
+    border-color: rgba(138,43,226,0.5);
+  }
+
+  .card {
+    @apply bg-card text-card-foreground p-4 rounded-lg shadow-md;
+  }
+
+  .button-primary {
+    @apply bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary-600;
+  }
+
+  .button-secondary {
+    @apply bg-secondary text-secondary-foreground py-2 px-4 rounded-md hover:bg-secondary-600;
   }
 }
