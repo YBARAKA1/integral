@@ -61,7 +61,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        "row-span-1 relative overflow-hidden rounded-3xl group transition duration-200 hover:shadow-xl shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
         className
       )}
       style={{
@@ -98,7 +98,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            'group-hover:bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10'
+            'group-hover:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10'
           )}
         >
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
@@ -110,8 +110,9 @@ export const BentoGridItem = ({
           {id === 2 && <GlobeDemo />}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-9 lg:-right-3">
+
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {['React.js', 'Next.js', 'Swift'].map((item) => (
+                {['HTML', 'CSS', 'JAVASCRIPT'].map((item) => (
                   <span
                     key={item}
                     className="lg:py-2 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -123,7 +124,7 @@ export const BentoGridItem = ({
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
-                {['Vue.js', 'AWS', 'MongoDB'].map((item) => (
+                {['JAVA', 'PYTHON', 'C#'].map((item) => (
                   <span
                     key={item}
                     className="lg:py-2 lg:px-6 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -131,6 +132,41 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
+              </div>
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {['TYPESCRIPT', 'NEXT.JS', 'VUE.JS'].map((item) => (
+                  <span
+                    key={item}
+                    className="lg:py-2 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+              </div>
+              
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                {['REACT.JS', 'AWS', 'MONGODB'].map((item) => (
+                  <span
+                    key={item}
+                    className="lg:py-2 lg:px-6 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {['POSTGRESQL', 'RABITMQ', 'KUBERNETES'].map((item) => (
+                  <span
+                    key={item}
+                    className="lg:py-2 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
               </div>
             </div>
           )}
@@ -146,12 +182,12 @@ export const BentoGridItem = ({
                 }
               }}/>
               </div>
-              <MagicButton
+              <MagicButton 
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] text-bold"
                 
               />
             </div>
